@@ -1,26 +1,26 @@
 class Zornmesh < Formula
   desc "Local-first agent mesh CLI and Model Context Protocol stdio bridge"
   homepage "https://github.com/nebrass/zorn-mesh"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/nebrass/zorn-mesh/releases/download/v0.1.1/zornmesh-aarch64-apple-darwin.tar.gz"
-      sha256 "bc22e51fddf2983aaf83acdba94e8622496dca0fa04201b5568c8a6df138b4fc"
+      url "https://github.com/nebrass/zorn-mesh/releases/download/v0.1.2/zornmesh-aarch64-apple-darwin.tar.gz"
+      sha256 "996d7f8617091e33baaa30ae564274ed590c8c8bd160f99017ff3b803c2806ec"
     else
-      url "https://github.com/nebrass/zorn-mesh/releases/download/v0.1.1/zornmesh-x86_64-apple-darwin.tar.gz"
-      sha256 "ef339fbfba74069f8070b2e58a0c544a25470a33398876ce85f9ddeb591e366a"
+      url "https://github.com/nebrass/zorn-mesh/releases/download/v0.1.2/zornmesh-x86_64-apple-darwin.tar.gz"
+      sha256 "08fa1122b31a1e02ebf22f075a5449c6d0f15044a2bcb00fa1af493c7e3803e0"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/nebrass/zorn-mesh/releases/download/v0.1.1/zornmesh-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b38c96dd32e6f7f0afdb7f117e79ecd83aa91ca27b283a3cd12429b9eb58b677"
+      url "https://github.com/nebrass/zorn-mesh/releases/download/v0.1.2/zornmesh-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "131ab348fe05603b5b3867b5a9ef5c114eac6884f94ae50c74e985f9ae7b0fee"
     else
-      url "https://github.com/nebrass/zorn-mesh/releases/download/v0.1.1/zornmesh-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a65180039b1dbfb038f874e472e4e539674d6f7e50de4ae15872a9e71e60823f"
+      url "https://github.com/nebrass/zorn-mesh/releases/download/v0.1.2/zornmesh-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "dc88f298dd9c3640530951932319738a6e1a4b78f8d7d9d1658cde5843bfc881"
     end
   end
 
@@ -29,6 +29,6 @@ class Zornmesh < Formula
   end
 
   test do
-    assert_match "zornmesh 0.1.1", shell_output("#{bin}/zornmesh --version")
+    assert_match "zornmesh 0.1.2", shell_output("#{bin}/zornmesh --version")
   end
 end
